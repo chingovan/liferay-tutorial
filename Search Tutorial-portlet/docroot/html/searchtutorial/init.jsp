@@ -4,6 +4,7 @@
 <%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui"%>
 
 <%@page import="javax.portlet.PortletURL"%>
-
+<%@page import="com.blogspot.chingovan.tutorial.DemoStudentUtil"%>
+<%@page import="com.blogspot.chingovan.tutorial.search.StudentSearchContainer"%>
 <portlet:defineObjects />
 <liferay-theme:defineObjects />
