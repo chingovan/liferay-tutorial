@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.blogspot.chingovan.customjsp.servicebuilder.model.Author">
+		<field name="authorId" type="long" />
+		<field name="name" type="String" />
+		<field name="institute" type="String" />
+		<field name="url" type="String" />
+	</model>
+	<model name="com.blogspot.chingovan.customjsp.servicebuilder.model.Book">
+		<field name="bookId" type="long" />
+		<field name="title" type="String" />
+		<field name="edition" type="String" />
+		<field name="isbn" type="String" />
+		<field name="cover" type="String" />
+		<field name="numberOfPage" type="int" />
+		<field name="publisherName" type="String" />
+		<field name="publisherURL" type="String" />
+	</model>
+</model-hints>

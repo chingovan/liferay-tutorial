@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.blogspot.chingovan.customjsp.servicebuilder" auto-namespace-tables="false">
+	<author>chinv</author>
+	<namespace>ChiNV</namespace>
+
+	<entity name="Book" local-service="true" remote-service="true" table="Book">
+		<column name="bookId" type="long" primary="true" id-type="increment" db-name="BookId"/>
+        <column name="title" type="String" db-name="Title"/>
+        <column name="edition" type="String" db-name="Edition"/>
+        <column name="isbn" type="String" db-name="ISBN"/>
+        <column name="cover" type="String" db-name="cover"/>
+        <column name="numberOfPage" type="int" db-name="NumberOfPage"/>
+        <column name="publisherName" type="String" db-name="PublisherName"/>
+        <column name="publisherURL" type="String" db-name="PublisherURL"/>
+        
+        <column name="authors" type="Collection" entity="Author" mapping-table="Books_Authors"/>
+	</entity>
+	<entity name="Author" local-service="true" remote-service="true" json-enabled="false">
+
+		<column name="authorId" type="long" primary="true" db-name="AuthorId" id-type="increment"/>
+		<column name="name" type="String" db-name="Name"/>
+		<column name="institute" type="String" db-name="Institute"/>
+		<column name="url" type="String" db-name="URL"/>
+		
+		<column name="books" type="Collection" entity="Book" mapping-table="Books_Authors"/>
+	</entity>
+</service-builder>

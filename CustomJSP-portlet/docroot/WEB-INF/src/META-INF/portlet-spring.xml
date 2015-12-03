@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.blogspot.chingovan.customjsp.servicebuilder.service.AuthorLocalService" class="com.blogspot.chingovan.customjsp.servicebuilder.service.impl.AuthorLocalServiceImpl" />
+	<bean id="com.blogspot.chingovan.customjsp.servicebuilder.service.AuthorService" class="com.blogspot.chingovan.customjsp.servicebuilder.service.impl.AuthorServiceImpl" />
+	<bean id="com.blogspot.chingovan.customjsp.servicebuilder.service.persistence.AuthorPersistence" class="com.blogspot.chingovan.customjsp.servicebuilder.service.persistence.AuthorPersistenceImpl" parent="basePersistence" />
+	<bean id="com.blogspot.chingovan.customjsp.servicebuilder.service.BookLocalService" class="com.blogspot.chingovan.customjsp.servicebuilder.service.impl.BookLocalServiceImpl" />
+	<bean id="com.blogspot.chingovan.customjsp.servicebuilder.service.BookService" class="com.blogspot.chingovan.customjsp.servicebuilder.service.impl.BookServiceImpl" />
+	<bean id="com.blogspot.chingovan.customjsp.servicebuilder.service.persistence.BookPersistence" class="com.blogspot.chingovan.customjsp.servicebuilder.service.persistence.BookPersistenceImpl" parent="basePersistence" />
+</beans>

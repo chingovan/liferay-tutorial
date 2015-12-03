@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.blogspot.chingovan.customjsp.servicebuilder.model.impl.AuthorModelImpl">
+		<attributes>
+			<id name="authorId">
+				<column name="AUTHORID" />
+			</id>
+			<basic name="name">
+				<column name="NAME" />
+			</basic>
+			<basic name="institute">
+				<column name="INSTITUTE" />
+			</basic>
+			<basic name="url">
+				<column name="URL" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.blogspot.chingovan.customjsp.servicebuilder.model.impl.BookModelImpl">
+		<attributes>
+			<id name="bookId">
+				<column name="BOOKID" />
+			</id>
+			<basic name="title">
+				<column name="TITLE" />
+			</basic>
+			<basic name="edition">
+				<column name="EDITION" />
+			</basic>
+			<basic name="isbn">
+				<column name="ISBN" />
+			</basic>
+			<basic name="cover" />
+			<basic name="numberOfPage">
+				<column name="NUMBEROFPAGE" />
+			</basic>
+			<basic name="publisherName">
+				<column name="PUBLISHERNAME" />
+			</basic>
+			<basic name="publisherURL">
+				<column name="PUBLISHERURL" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.blogspot.chingovan.customjsp.servicebuilder.model.impl.AuthorImpl" name="Author">
+		<table name="Author" />
+		<attributes />
+	</entity>
+	<entity class="com.blogspot.chingovan.customjsp.servicebuilder.model.impl.BookImpl" name="Book">
+		<table name="Book" />
+		<attributes />
+	</entity>
+</entity-mappings>

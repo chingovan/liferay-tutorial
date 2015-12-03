@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.blogspot.chingovan.customjsp.servicebuilder.model.Author" />
+	<import class="com.blogspot.chingovan.customjsp.servicebuilder.model.Book" />
+	<class name="com.blogspot.chingovan.customjsp.servicebuilder.model.impl.AuthorImpl" table="Author">
+		<cache usage="read-write" />
+		<id name="authorId" column="AuthorId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Name" />
+		<property name="institute" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Institute" />
+		<property name="url" type="com.liferay.portal.dao.orm.hibernate.StringType" column="URL" />
+	</class>
+	<class name="com.blogspot.chingovan.customjsp.servicebuilder.model.impl.BookImpl" table="Book">
+		<cache usage="read-write" />
+		<id name="bookId" column="BookId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Title" />
+		<property name="edition" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Edition" />
+		<property name="isbn" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ISBN" />
+		<property name="cover" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOfPage" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="NumberOfPage" />
+		<property name="publisherName" type="com.liferay.portal.dao.orm.hibernate.StringType" column="PublisherName" />
+		<property name="publisherURL" type="com.liferay.portal.dao.orm.hibernate.StringType" column="PublisherURL" />
+	</class>
+</hibernate-mapping>
