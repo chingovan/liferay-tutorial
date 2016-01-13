@@ -3,14 +3,14 @@
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
 	
 	<portlet>
-		<portlet-name>combine</portlet-name>
-		<display-name>Combine</display-name>
+		<portlet-name>ajax</portlet-name>
+		<display-name>Ajax</display-name>
 		<portlet-class>
-			com.blogspot.chingovan.tutorial.combine.portlet.CombinePortlet
+			com.blogspot.chingovan.tutorial.ajax.AJAXPortlet
 		</portlet-class>
 		<init-param>
 			<name>view-template</name>
-			<value>/html/combine/view.jsp</value>
+			<value>/html/ajax/view.jsp</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
@@ -21,8 +21,8 @@
 		<supported-locale>en</supported-locale>
         <resource-bundle>content.languages.Language</resource-bundle>
 		<portlet-info>
-			<title>Combine</title>
-			<short-title>Combine</short-title>
+			<title>Ajax</title>
+			<short-title>Ajax</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>

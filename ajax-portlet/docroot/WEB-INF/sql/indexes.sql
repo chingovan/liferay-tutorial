@@ -1,0 +1,1 @@
+create index IX_1B738522 on Student (Code);
