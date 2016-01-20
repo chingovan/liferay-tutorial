@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.blogspot.chingovan.customquery.model.Author" />
+	<import class="com.blogspot.chingovan.customquery.model.Post" />
+	<class name="com.blogspot.chingovan.customquery.model.impl.AuthorImpl" table="ExampleBlog_Author">
+		<cache usage="read-write" />
+		<id name="authorId" column="AuthorId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Name" />
+	</class>
+	<class name="com.blogspot.chingovan.customquery.model.impl.PostImpl" table="ExampleBlog_Post">
+		<cache usage="read-write" />
+		<id name="postId" column="PostId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Title" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Content" />
+		<property name="authorId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="AuthorId" />
+	</class>
+</hibernate-mapping>

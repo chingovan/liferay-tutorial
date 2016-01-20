@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.blogspot.chingovan.customquery" auto-namespace-tables="true">
+	<author>chinv</author>
+	<namespace>ExampleBlog</namespace>
+
+	<entity name="Author" local-service="true">
+		<column name="authorId" type="long" primary="true" db-name="AuthorId"/>
+		<column name="name" type="String" db-name="Name"/>
+		<column name="posts" type="Collection" entity="Post" />
+	</entity>
+	
+	<entity name="Post" local-service="true">
+		<column name="postId" type="long" primary="true" db-name="PostId"/>
+		<column name="title" type="String" db-name="Title"/>
+		<column name="content" type="String" db-name="Content"/>
+		<column name="authorId" type="long" db-name="AuthorId"/>
+	</entity>
+</service-builder>

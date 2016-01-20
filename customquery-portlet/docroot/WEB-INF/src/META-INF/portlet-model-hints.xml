@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.blogspot.chingovan.customquery.model.Author">
+		<field name="authorId" type="long" />
+		<field name="name" type="String" />
+	</model>
+	<model name="com.blogspot.chingovan.customquery.model.Post">
+		<field name="postId" type="long" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="authorId" type="long" />
+	</model>
+</model-hints>
