@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.blogspot.chingovan.tutorial.actions" auto-namespace-tables="false">
+	<author>chinv</author>
+	<namespace>actions</namespace>
+
+	<entity name="Student" local-service="true" remote-service="true"
+		table="Student">
+
+		<!-- PK fields -->
+		<column name="studentId" type="long" primary="true" db-name="StudentId" />
+
+		<!-- Other fields -->
+
+		<column name="code" type="String" db-name="Code" />
+		<column name="fullName" type="String" db-name="FullName" />
+		<column name="birthday" type="Date" db-name="Birthday" />
+		<column name="gender" type="boolean" db-name="Gender" />
+		<column name="address" type="String" db-name="Address" />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="fullName" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="C_F" return-type="Collection">
+			<finder-column name="code" comparator="LIKE" />
+			<finder-column name="fullName" comparator="LIKE" />
+		</finder>
+
+		<finder name="C_F_G" return-type="Collection">
+			<finder-column name="code" comparator="LIKE" />
+			<finder-column name="fullName" comparator="LIKE" />
+			<finder-column name="gender" comparator="=" />
+		</finder>
+	</entity>
+</service-builder>

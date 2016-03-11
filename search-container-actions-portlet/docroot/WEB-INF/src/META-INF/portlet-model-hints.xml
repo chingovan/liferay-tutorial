@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.blogspot.chingovan.tutorial.actions.model.Student">
+		<field name="studentId" type="long" />
+		<field name="code" type="String" />
+		<field name="fullName" type="String" />
+		<field name="birthday" type="Date" />
+		<field name="gender" type="boolean" />
+		<field name="address" type="String" />
+	</model>
+</model-hints>
