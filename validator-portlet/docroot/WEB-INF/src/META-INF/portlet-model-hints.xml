@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.blogspot.chingovan.validator.model.Validator_Student">
+		<field name="studentId" type="long" />
+		<field name="code" type="String" />
+		<field name="fullname" type="String" />
+		<field name="gender" type="boolean" />
+		<field name="birthday" type="Date" >
+			<hint name="show-time">false</hint>
+		</field>
+		<field name="email" type="String" />
+		<field name="address" type="String" />
+		<field name="blog" type="String" />
+		<field name="mark" type="double" />
+	</model>
+</model-hints>
