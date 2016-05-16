@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.blogspot.chingovan.validator.model.Validator_Student" />
+	<class name="com.blogspot.chingovan.validator.model.impl.Validator_StudentImpl" table="Validator_Student">
+		<cache usage="read-write" />
+		<id name="studentId" column="StudentId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Code" />
+		<property name="fullname" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Fullname" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="Gender" />
+		<property name="birthday" type="org.hibernate.type.TimestampType" column="Birthday" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Email" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Address" />
+		<property name="blog" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Blog" />
+		<property name="mark" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="Mark" />
+	</class>
+</hibernate-mapping>

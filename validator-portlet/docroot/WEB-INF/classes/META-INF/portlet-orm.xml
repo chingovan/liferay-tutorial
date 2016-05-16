@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.blogspot.chingovan.validator.model.impl.Validator_StudentModelImpl">
+		<attributes>
+			<id name="studentId">
+				<column name="STUDENTID" />
+			</id>
+			<basic name="code">
+				<column name="CODE" />
+			</basic>
+			<basic name="fullname">
+				<column name="FULLNAME" />
+			</basic>
+			<basic name="gender">
+				<column name="GENDER" />
+			</basic>
+			<basic name="birthday">
+				<column name="BIRTHDAY" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="email">
+				<column name="EMAIL" />
+			</basic>
+			<basic name="address">
+				<column name="ADDRESS" />
+			</basic>
+			<basic name="blog">
+				<column name="BLOG" />
+			</basic>
+			<basic name="mark">
+				<column name="MARK" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.blogspot.chingovan.validator.model.impl.Validator_StudentImpl" name="Validator_Student">
+		<table name="Validator_Student" />
+		<attributes />
+	</entity>
+</entity-mappings>
