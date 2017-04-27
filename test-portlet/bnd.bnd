@@ -1,0 +1,3 @@
+Bundle-Name: test-portlet
+Bundle-SymbolicName: com.chingovan.liferay7.test
+Bundle-Version: 1.0.0
