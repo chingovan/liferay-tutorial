@@ -1,0 +1,1 @@
+create index IX_AC4BA036 on Student (Gender);

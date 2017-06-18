@@ -1,0 +1,9 @@
+Bundle-Name: database-api
+Bundle-SymbolicName: com.blogspot.chingovan.database.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.blogspot.chingovan.database.exception,\
+	com.blogspot.chingovan.database.model,\
+	com.blogspot.chingovan.database.service,\
+	com.blogspot.chingovan.database.service.persistence
+-includeresource: META-INF/service.xml=../database-service/service.xml

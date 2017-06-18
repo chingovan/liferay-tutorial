@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.blogspot.chingovan.database.model.Student">
+		<field name="studentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="code" type="String" />
+		<field name="fullName" type="String" />
+		<field name="birthday" type="Date" />
+		<field name="gender" type="boolean" />
+		<field name="address" type="String" />
+	</model>
+</model-hints>
